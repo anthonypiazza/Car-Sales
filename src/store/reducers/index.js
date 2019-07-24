@@ -32,7 +32,8 @@ export const reducer = (state = initialState, action) => {
         car: {
           ...state.car,
           features: [...state.car.features, action.payload]
-        }
+        },
+        store: state.store.filter(item=> action.payload.id !== item.id)
       }
     case REMOVE_FEATURE:
       console.log('Feature Removed')
@@ -43,7 +44,8 @@ export const reducer = (state = initialState, action) => {
         car: {
           ...state.car,
           features: state.car.features.filter(item=> action.payload.id !== item.id)
-        }
+        },
+        store: [...state.store, action.payload] 
       }
         
     default: 
