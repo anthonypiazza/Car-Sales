@@ -11,11 +11,12 @@ class Total extends React.Component{
   }
 };
 
-const mapStatetoProps = state => {
+
+const mapStateToProps = state => {
   return{
-    car: state.car,
-    additionalPrice: state.additionalPrice
+    additionalPrice: state.additionalPrice,
+    car: state.car
   }
 }
 
-export default connect (mapStatetoProps, {})(Total);
+export default connect (mapStateToProps, {})(Total);

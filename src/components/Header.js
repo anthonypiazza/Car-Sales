@@ -15,10 +15,10 @@ class Header extends React.Component{
   }
 };
 
-const mapStatetoProps = state => {
-  return{
-    car: state.car,
-  }
+const mapStateToProps = state => {
+  return {
+    car: state.car
+  };
 }
 
-export default connect (mapStatetoProps, {})(Header);
+export default connect (mapStateToProps, {})(Header);
