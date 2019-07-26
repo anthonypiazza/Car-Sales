@@ -1,10 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
+
 import { removeFeature } from '../store/actions';
+
 
 import AddedFeature from './AddedFeature';
 
 class AddedFeatures extends React.Component{
+
   render(){
     return (
       <div className="content">
@@ -12,6 +15,7 @@ class AddedFeatures extends React.Component{
         {this.props.car.features.length ? (
           <ol type="1">
             {this.props.car.features.map(item => (
+
               <AddedFeature 
                 removeFeature={this.props.removeFeature} 
                 key={item.id} 
@@ -27,7 +31,6 @@ class AddedFeatures extends React.Component{
   }
 };
 
-
 const mapStateToProps = state => {
   return{
     car: state.car
@@ -35,3 +38,4 @@ const mapStateToProps = state => {
 }
 
 export default connect (mapStateToProps, { removeFeature })(AddedFeatures);
+

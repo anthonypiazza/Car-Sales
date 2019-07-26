@@ -11,6 +11,7 @@ class Total extends React.Component{
   }
 };
 
+
 const mapStateToProps = state => {
   return{
     additionalPrice: state.additionalPrice,
